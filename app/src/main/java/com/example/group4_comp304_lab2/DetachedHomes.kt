@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.view.View
 
 class DetachedHomes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,5 +54,9 @@ class DetachedHomes : AppCompatActivity() {
 
             else -> super.onOptionsItemSelected(item)
         }
+    }
+    fun checkout(view: View) {
+        val intent = Intent(this,CheckOut::class.java)
+        startActivity(intent)
     }
 }

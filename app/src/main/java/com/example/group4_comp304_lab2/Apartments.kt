@@ -56,5 +56,15 @@ class Apartments : AppCompatActivity() {
 
             else -> super.onOptionsItemSelected(item)
         }
+
+    }
+    //create a list for the selected homes to pass later
+    //use preferences to view on next page
+
+
+    //button will go to new activity check-out screen
+    fun checkout(view: View) {
+        val intent = Intent(this,CheckOut::class.java)
+        startActivity(intent)
     }
 }

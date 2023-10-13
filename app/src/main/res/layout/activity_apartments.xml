@@ -187,5 +187,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
-        android:text="CHECKOUT" />
+        android:text="CHECKOUT"
+        android:onClick="checkout"/>
 </LinearLayout>

@@ -53,7 +53,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Condominium 1 \n\n99 Broadway Avenue\nToronto, ON"
+                    android:text="Condominium 1 \n\n99 Broadway Ave\nToronto, ON"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -62,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:text="2700"
+                    android:text="$2700"
                     android:textColor="@color/blue"
                     android:textSize="24dp" />
             </LinearLayout>
@@ -86,7 +86,7 @@
                     app:srcCompat="@drawable/condo2" />
 
                 <TextView
-                    android:id="@+id/apt2Address"
+                    android:id="@+id/condo2Address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -100,7 +100,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:text="2400"
+                    android:text="$2400"
                     android:textColor="@color/blue"
                     android:textSize="24dp" />
             </LinearLayout>
@@ -123,7 +123,7 @@
                     app:srcCompat="@drawable/condo3" />
 
                 <TextView
-                    android:id="@+id/apt3Address"
+                    android:id="@+id/condo3Address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -165,7 +165,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Condominium 4 \n\n99 The Donway West\nToronto, ON"
+                    android:text="Condominium 4 \n\n99 Donway West\nToronto, ON"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -174,7 +174,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:text="2800"
+                    android:text="$2800"
                     android:textColor="@color/blue"
                     android:textSize="24dp" />
             </LinearLayout>
@@ -187,5 +187,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
-        android:text="CHECKOUT" />
+        android:text="CHECKOUT"
+        android:onClick="checkout"/>
 </LinearLayout>
