@@ -4,4 +4,39 @@
 
 
     <string name="title_activity_apartments">apartments</string>
+    <string name="available_apartments">Available Apartments</string>
+    <string name="apt1title">Apartment 1 \n\n7 Jackes Avenue\nToronto, ON</string>
+    <string name="apt1price">$2210</string>
+    <string name="apt2title">Apartment 2 \n\n7131 Mill Street\nToronto, ON</string>
+    <string name="apt2price">$3750</string>
+    <string name="apt3title">Apartment 3 \n\n118 Balliol Street\nToronto, ON</string>
+    <string name="apt3price">$2400</string>
+    <string name="apt4title">Apartment 4 \n\n50 Alexander Street\nToronto, ON</string>
+    <string name="apt4price">2075</string>
+    <string name="det1title">Detached Home 1 \n\n129 Kenilworth Ave\nToronto, ON</string>
+    <string name="det1price">$4200</string>
+    <string name="det2title">Detached Home 2 \n\n1018 Tigerliliy\nPickering, ON</string>
+    <string name="det2price">$3450</string>
+    <string name="det3title">Detached Home 3 \n\n82 Homewood Ave\nToronto, ON</string>
+    <string name="det3price">$7590</string>
+    <string name="det4title">Detached Home 4 \n\n16 Minto Street\nToronto, ON</string>
+    <string name="det4price">$5500</string>
+    <string name="condo1title">Condominium 1 \n\n99 Broadway Ave\nToronto, ON</string>
+    <string name="condo1price">$2700</string>
+    <string name="condo2title">Condominium 2 \n\n9471 Younge Street\nRichmond Hill, ON</string>
+    <string name="condo2price">$2400</string>
+    <string name="condo3title">Condominium 3 \n\n10 Muirhead Road\nNorth York, ON</string>
+    <string name="condo3price">$3400</string>
+    <string name="condo4title">Condominium 4 \n\n99 Donway West\nToronto, ON</string>
+    <string name="condo4price">$2800</string>
+    <string name="semi1title">Semi-Detached 1 \n\n30 Soudan Avenue\nToronto, ON</string>
+    <string name="semi1price">$5555</string>
+    <string name="semi2title">Semi-Detached 2 \n\n48 Dewhurst Road\nToronto, ON</string>
+    <string name="semi2price">$2450</string>
+    <string name="town1title">Town House 1 \n\n19 Eby Way\nMarkham, ON</string>
+    <string name="town1price">$3030</string>
+    <string name="town2title">Town House 2 \n\n80 Pond Drive\nMarkham, ON</string>
+    <string name="town2price">$3600</string>
+    <string name="town3title">Town House 3 \n\n60 David Street\nToronto, ON</string>
+    <string name="town3price">$4200</string>
 </resources>

@@ -17,19 +17,7 @@
             android:name=".CheckOut"
             android:exported="false" />
         <activity
-            android:name=".TownHouse"
-            android:exported="false" />
-        <activity
-            android:name=".Condo"
-            android:exported="false" />
-        <activity
-            android:name=".SemiDetached"
-            android:exported="false" />
-        <activity
-            android:name=".DetachedHomes"
-            android:exported="false" />
-        <activity
-            android:name=".Apartments"
+            android:name=".PropertyListing"
             android:exported="false" />
         <activity
             android:name=".HomeTypes"
