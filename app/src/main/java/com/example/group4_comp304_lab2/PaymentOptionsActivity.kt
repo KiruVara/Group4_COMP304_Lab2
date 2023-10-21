@@ -18,27 +18,16 @@ class PaymentOptionsActivity : AppCompatActivity() {
         continueButton.setOnClickListener {
             val selectedPaymentOptionId = paymentRadioGroup.checkedRadioButtonId
             if (selectedPaymentOptionId == -1) {
-                // No payment option selected
-                // You can show an error message or handle it as needed.
+                // Handle no payment option selected
             } else {
                 val selectedPaymentOption: RadioButton = findViewById(selectedPaymentOptionId)
 
-                // Depending on the selected payment option, you can perform actions here.
-                when (selectedPaymentOption.id) {
-                    R.id.cashRadioButton -> {
-                        // Handle cash payment option
-                    }
-                    R.id.creditCardRadioButton -> {
-                        // Handle credit card payment option
-                    }
-                    R.id.debitCardRadioButton -> {
-                        // Handle debit card payment option
-                    }
-                }
+                // Create an Intent to start the CreditCardInfoActivity
+                val intent = Intent(this, CreditCardInfoActivity::class.java)
 
-                // You can also pass the selected payment option to the next screen/activity.
-                val intent = Intent(this, PropertyListing::class.java)
+                // Pass the selected payment option as an extra to the next activity
                 intent.putExtra("selectedPaymentOption", selectedPaymentOption.text.toString())
+
                 startActivity(intent)
             }
         }
