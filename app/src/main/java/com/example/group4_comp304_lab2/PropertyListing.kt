@@ -15,9 +15,9 @@ import androidx.recyclerview.widget.RecyclerView
 class PropertyListing : AppCompatActivity(){
     private lateinit var propertyRecyclerView: RecyclerView
     private lateinit var propertyArrayList: ArrayList<Property>
-    lateinit var checkBoxId: Array<Int>
+    private lateinit var selectedPropertyArrayList: ArrayList<Property>
+    lateinit var checkBoxText: Array<String>
     lateinit var imageId: Array<Int>
-    lateinit var address: Array<String>
     lateinit var price: Array<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,14 +27,14 @@ class PropertyListing : AppCompatActivity(){
         var type = intent.getStringExtra("type")
         if (type == "apartment"){
             imageId = arrayOf(R.drawable.apartment1,R.drawable.apartment2,R.drawable.apartment3,R.drawable.apartment4)
-            address = arrayOf(getString(R.string.apt1title),getString(R.string.apt2title),
+            checkBoxText = arrayOf(getString(R.string.apt1title),getString(R.string.apt2title),
                 getString(R.string.apt3title), getString(R.string.apt4title))
             price = arrayOf(getString(R.string.apt1price),getString(R.string.apt2price)
                 ,getString(R.string.apt3price), getString(R.string.apt4price))
         }
         else if(type =="detached"){
             imageId = arrayOf( R.drawable.detached1,R.drawable.detached2,R.drawable.detached3,R.drawable.detached4)
-            address = arrayOf(getString(R.string.det1title),getString(R.string.det2title),
+            checkBoxText = arrayOf(getString(R.string.det1title),getString(R.string.det2title),
                 getString(R.string.det3title), getString(R.string.det4title))
             price = arrayOf(getString(R.string.det1price),getString(R.string.det2price)
                 ,getString(R.string.det3price), getString(R.string.det4price))
@@ -42,19 +42,19 @@ class PropertyListing : AppCompatActivity(){
         else if(type =="condo"){
             imageId = arrayOf( R.drawable.condo1,R.drawable.condo2,R.drawable.condo3,
                 R.drawable.condo4)
-            address = arrayOf(getString(R.string.condo1title),getString(R.string.condo2title),
+            checkBoxText = arrayOf(getString(R.string.condo1title),getString(R.string.condo2title),
                 getString(R.string.condo3title), getString(R.string.condo4title))
             price = arrayOf(getString(R.string.condo1price),getString(R.string.condo2price)
                 ,getString(R.string.condo3price), getString(R.string.condo4price))
         }
         else if(type =="semi"){
             imageId = arrayOf( R.drawable.semi1,R.drawable.semi2)
-            address = arrayOf(getString(R.string.semi1title),getString(R.string.semi2title))
+            checkBoxText = arrayOf(getString(R.string.semi1title),getString(R.string.semi2title))
             price = arrayOf(getString(R.string.semi1price),getString(R.string.semi2price))
         }
         else if(type =="town"){
             imageId = arrayOf( R.drawable.town1,R.drawable.town2,R.drawable.town3)
-            address = arrayOf(getString(R.string.town1title),getString(R.string.town2title),
+            checkBoxText = arrayOf(getString(R.string.town1title),getString(R.string.town2title),
                 getString(R.string.town3title))
             price = arrayOf(getString(R.string.town1price),getString(R.string.town2price)
                 ,getString(R.string.town3price))
@@ -73,13 +73,30 @@ class PropertyListing : AppCompatActivity(){
     }
 
     private fun getPropertyData() {
-        for ( i in address.indices){
-            val property = Property(imageId[i],address[i],price[i])
+        for ( i in checkBoxText.indices){
+            val property = Property(imageId[i],checkBoxText[i],price[i])
             propertyArrayList.add(property)
 
         }
         propertyRecyclerView.adapter = PropertyAdapter(propertyArrayList)
 
+    }
+
+    private fun getSelectedPropertyData() {
+        for ( i in checkBoxText.indices){
+            val property = Property(imageId[i],checkBoxText[i],price[i])
+            selectedPropertyArrayList.add(property)
+
+        }
+        propertyRecyclerView.adapter = PropertyAdapter(selectedPropertyArrayList)
+
+    }
+
+    fun checkOut(view: View){
+        
+        getSelectedPropertyData()
+        val intent = Intent(this,PropertyListing::class.java)
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

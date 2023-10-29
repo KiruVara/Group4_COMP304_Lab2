@@ -25,13 +25,13 @@ class PropertyAdapter(private val propertyList: ArrayList<Property>) : RecyclerV
     override fun onBindViewHolder(holder: PropertyViewHolder, position: Int) {
         val currentItem = propertyList[position]
         holder.image.setImageResource(currentItem.image)
-        holder.address.text = currentItem.address
+        holder.checkBox.text = currentItem.checkBoxText
         holder.price.text = currentItem.price
     }
 
     class PropertyViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){
         var image: ImageView = itemView.findViewById(R.id.property_image)
-        var address: TextView = itemView.findViewById(R.id.property_address)
+        var checkBox: TextView = itemView.findViewById(R.id.property_checkbox)
         var price: TextView = itemView.findViewById(R.id.property_price)
     }
 
