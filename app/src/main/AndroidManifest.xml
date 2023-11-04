@@ -22,6 +22,9 @@
         <activity
             android:name=".HomeTypes"
             android:exported="false" />
+        <activity
+            android:name=".PaymentOptionsActivity"
+            android:exported="false" />
         <activity android:name=".CreditCardInfoActivity" />
         <activity
             android:name=".MainActivity"
